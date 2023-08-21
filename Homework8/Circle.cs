@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework8
 {
-    internal class Circle : Shape, IComparable<Shape>
+    internal class Circle : Shape
     {
         double radius;
         string color;
@@ -40,11 +40,6 @@ namespace Homework8
         public override string ToString()
         {
             return $"This {Name} is {color} with area of {Area():F2} and perimetr of {Perimetr():F2}";
-        }
-
-        public override int CompareTo(Shape other)
-        {
-            return this.Area().CompareTo(other.Area());
         }
     }
 }

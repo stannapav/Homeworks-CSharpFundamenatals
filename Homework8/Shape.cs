@@ -20,6 +20,9 @@ namespace Homework8
 
         abstract public double Area();
         abstract public double Perimetr();
-        public abstract int CompareTo(Shape other);
+        int IComparable<Shape>.CompareTo(Shape other)
+        {
+            return this.Area().CompareTo(other.Area());
+        }
     }
 }
